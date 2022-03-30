@@ -75,14 +75,15 @@ WSGI_APPLICATION = 'fusion.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'fusion',
-#         'USER': 'postgres',
-#         'PASSWORD':'12345678',
-#     }
-# }
+"""DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fusion',
+        'USER': 'postgres',
+        'PASSWORD':'12345678',
+    }
+}"""
+
 DATABASES = {
      'default': {dj_database_url.config(),}
             }
@@ -125,6 +126,7 @@ STATIC_URL = '/static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 #so no modo desenvolvimeto
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
