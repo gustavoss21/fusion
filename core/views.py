@@ -30,13 +30,4 @@ class IndexView(FormView):
     def form_invalid(self, form,*args,**kwargs):
         messages.error(self.request, 'Seu E-mail não foi enviado, tente mais tarde')
         print(1111111111111222)
-        return super(IndexView, self).form_valid(form, *args, **kwargs)
-
-# {% for m in messages %}
-#            <div class="alert alert-{{ message.tags }}">
-#              <button type="button" class="close" data-dismiss="alert"></button>
-#              <strong> {{ m }}</strong>
-#            </div>
-#        {% endfor%}
-
-
+        return super(IndexView, self).form_invalid(form, *args, **kwargs)
